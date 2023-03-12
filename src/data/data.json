@@ -1,0 +1,139 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Shivani",
+      "last_name": "Naiknaware",
+      "contact_no": "9356282439",
+      "email": "shiv@gmail.com",
+      "password": "shiv@123",
+      "role_id": "1"
+    },
+    {
+      "id": 2,
+      "first_name": "Vaibhav",
+      "last_name": "Naiknaware",
+      "contact_no": "9356282439",
+      "email": "vaibhav@gmail.com",
+      "password": "vaibhav@123",
+      "role_id": "2"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Fernandes",
+      "contact_no": "9876543209",
+      "role_id": "1",
+      "email": "john@gmail.com",
+      "password": "john@123",
+      "re_password": "john@123",
+      "id": 3
+    },
+    {
+      "first_name": "Manny",
+      "last_name": "Sandres",
+      "contact_no": "9002368900",
+      "role_id": "2",
+      "email": "manny@gmail.com",
+      "password": "manny@123",
+      "re_password": "manny@123",
+      "id": 4
+    }
+  ],
+  "menu": [
+    {
+      "id": 3,
+      "name": "Masala Maggie",
+      "status": "open",
+      "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, enim!",
+      "created_by": 3,
+      "price": 200
+    },
+    {
+      "name": "Paneer Masala",
+      "description": "mdskhbvksd kshdbkbvc ",
+      "created_by": 1,
+      "status": "open",
+      "id": 4,
+      "price": 250
+    },
+    {
+      "name": "Biryani",
+      "description": "Biryani is a classic Indian dish that is beloved for its aromatic flavors, rich spices, and tender meat or vegetables. This hearty rice-based dish is a staple in many parts of India and has become popular worldwide for its unique taste and texture.  The preparation of biryani involves layering cooked rice and a mixture of meat or vegetables with fragrant spices such as saffron, cumin, and cardamom. The dish is then slow-cooked on a low flame, allowing the flavors to blend together and creating a tender and juicy biryani.",
+      "price": 300,
+      "created_by": 1,
+      "status": "open",
+      "id": 5
+    },
+    {
+      "name": "Veg Pulav",
+      "description": "Veg pulav is a classic Indian rice dish that is loaded with vegetables and aromatic spices. This dish is perfect for a wholesome and filling meal that is also easy to prepare.  The dish is made by cooking a mix of vegetables such as carrots, beans, peas, and potatoes with aromatic spices like cumin, cardamom, and cinnamon. Once the vegetables are tender, they are combined with long-grain basmati rice and cooked together with water or vegetable stock until the rice is perfectly cooked.  Veg pulav is typically served with a side of raita or a cooling yogurt-based dip to complement the spices in the dish. It can also be enjoyed with a variety of sides such as papadums, pickles, or chutneys.",
+      "price": 300,
+      "created_by": 1,
+      "status": "open",
+      "id": 6
+    },
+    {
+      "name": "Egg Curry",
+      "description": "Egg pulav is a classic Indian rice dish that is loaded with vegetables and aromatic spices. This dish is perfect for a wholesome and filling meal that is also easy to prepare.  The dish is made by cooking a mix of vegetables such as carrots, beans, peas, and potatoes with aromatic spices like cumin, cardamom, and cinnamon. Once the vegetables are tender, they are combined with long-grain basmati rice and cooked together with water or vegetable stock until the rice is perfectly cooked.  Veg pulav is typically served with a side of raita or a cooling yogurt-based dip to complement the spices in the dish. It can also be enjoyed with a variety of sides such as papadums, pickles, or chutneys.",
+      "price": 170,
+      "created_by": 1,
+      "status": "open",
+      "id": 7
+    },
+    {
+      "name": "Rice and Curry",
+      "description": "iuiuiunknkjnkjbkbhnbng",
+      "price": 100,
+      "created_by": 1,
+      "status": "open",
+      "id": 8
+    }
+  ],
+  "order": [
+    {
+      "id": 3,
+      "name": "Masala Maggie",
+      "status": "open",
+      "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, enim!",
+      "created_by": 3,
+      "price": 200,
+      "user_id": 2
+    },
+    {
+      "name": "Paneer Masala",
+      "description": "mdskhbvksd kshdbkbvc ",
+      "created_by": 1,
+      "status": "open",
+      "id": 4,
+      "price": 250,
+      "user_id": 2
+    },
+    {
+      "name": "Paneer Masala",
+      "description": "mdskhbvksd kshdbkbvc ",
+      "created_by": 1,
+      "status": "open",
+      "price": 250,
+      "user_id": 4,
+      "id": 5
+    },
+    {
+      "name": "Egg Curry",
+      "description": "Egg pulav is a classic Indian rice dish that is loaded with vegetables and aromatic spices. This dish is perfect for a wholesome and filling meal that is also easy to prepare.  The dish is made by cooking a mix of vegetables such as carrots, beans, peas, and potatoes with aromatic spices like cumin, cardamom, and cinnamon. Once the vegetables are tender, they are combined with long-grain basmati rice and cooked together with water or vegetable stock until the rice is perfectly cooked.  Veg pulav is typically served with a side of raita or a cooling yogurt-based dip to complement the spices in the dish. It can also be enjoyed with a variety of sides such as papadums, pickles, or chutneys.",
+      "price": 170,
+      "created_by": 1,
+      "status": "open",
+      "user_id": 2,
+      "id": 6
+    },
+    {
+      "name": "Paneer Masala",
+      "description": "mdskhbvksd kshdbkbvc ",
+      "created_by": 1,
+      "status": "open",
+      "price": 250,
+      "user_id": 2,
+      "id": 7
+    }
+  ]
+}

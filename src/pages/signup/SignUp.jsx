@@ -2,11 +2,11 @@ import React from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { POST } from "../sign.in/SignIn";
 import Layout from "./Layout";
 import * as Yup from "yup";
 import "yup-phone";
 import "./styles/signup.css";
+import { POST } from "../../services/axios";
 
 export const SignUpInitialValues = {
   first_name: "",
@@ -66,7 +66,7 @@ function SignUp() {
 
   const handleSubmit = (values, actions) => {
     console.log(values);
-    // addUser({ user: { ...values } });
+    addUser({ ...values });
     actions.resetForm();
   };
 

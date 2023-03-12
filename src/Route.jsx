@@ -21,16 +21,17 @@ const RouteComponent = () => {
         <ReactQueryDevtools />
       </QueryClientProvider>
       <ToastContainer
-        position="top-center"
-        autoClose={1000}
-        hideProgressBar
-        newestOnTop
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
         draggable
         pauseOnHover
         theme="light"
+        type="success"
       />
     </Router>
   );

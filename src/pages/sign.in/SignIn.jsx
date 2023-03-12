@@ -4,17 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Layout from "./Layout";
 import * as Yup from "yup";
-import axios from "axios";
 import "./styles/signin.css";
+import { GET } from "../../services/axios";
 
-const instance = axios.create({ baseURL: "http://localhost:3000" });
-
-export const POST = (url, body) =>
-  instance
-    .post(url, body, { headers: { Authorization: body.accessToken } })
-    .then((res) => res);
-
-export const userLoginQuery = (payload) => POST("/users/sign_in", payload);
+export const userLoginQuery = (payload) =>
+  GET(`/users?email=${payload.email}&password=${payload.password}`);
 
 /* login form */
 export const loginInitialValues = {
@@ -36,18 +30,29 @@ function SignIn() {
   const navigate = useNavigate();
 
   const onSuccess = (response) => {
-    // const accessToken = response?.headers?.authorization;
-    // const role_id = response?.data?.status?.data?.role_id;
-    // const user = response?.data?.status?.data;
-
-    // setLocalStorage(TOKEN, accessToken);
-    // setLocalStorage(USER, stringifyData(user));
-
+    sessionStorage.setItem("user", JSON.stringify(response[0]));
+    console.log(response[0]?.role_id);
+    const role_id = response[0]?.role_id;
     toast(`Logged in successfully`);
-    // navigate(handleNavigate(role_id), { replace: true });
+
+    switch (role_id) {
+      case "1":
+        navigate("/supplier");
+        break;
+      case "2":
+        navigate("/user");
+        break;
+      case "3":
+        navigate("/admin");
+        break;
+      default:
+        return "error";
+    }
   };
 
   const onError = (error) => {
+    console.log(error);
+
     toast.warn(error.response?.data);
     // errorNavigation(navigate, error);
   };
@@ -58,7 +63,7 @@ function SignIn() {
   });
 
   const handleSubmit = (values) => {
-    // userLogin({ user: { ...values } });
+    userLogin(values);
     console.log(values);
   };
 
